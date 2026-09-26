@@ -105,11 +105,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-4 bg-gradient-to-b from-white via-white to-neutral-100 text-black overflow-y-auto">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-4 bg-gradient-to-b from-white via-purple-50 to-violet-100 text-black overflow-y-auto">
       <div className="w-full max-w-lg relative z-10 flex flex-col flex-1">
         <div className="text-center mb-10 shrink-0">
-          <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-black/5 to-black/15 border border-black/10 rounded-2xl mb-4 shadow-sm">
-             <DocUnlockIcon className="w-7 h-7 text-black" />
+          <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-100 to-violet-200 border border-purple-200/60 rounded-2xl mb-4 shadow-sm">
+             <DocUnlockIcon className="w-7 h-7 text-purple-700" />
           </div>
           <h1 className="text-3xl font-bold text-black tracking-tight mb-4 lowercase">docunlock</h1>
           <div className="max-w-md mx-auto space-y-2">
@@ -122,7 +122,7 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white border border-black/10 rounded-3xl p-6 md:p-8 shadow-xl flex flex-col min-h-[360px]">
+        <div className="bg-white border border-purple-100 rounded-3xl p-6 md:p-8 shadow-xl shadow-purple-200/40 flex flex-col min-h-[360px]">
           {status === 'idle' && (
             <div
               onDragOver={(e) => e.preventDefault()}
@@ -138,10 +138,10 @@ const App: React.FC = () => {
               />
               <label
                 htmlFor="fileInput"
-                className="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-black/10 hover:border-black/30 rounded-2xl p-8 cursor-pointer transition-all bg-black/[0.01] hover:bg-black/[0.03] group text-center"
+                className="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-purple-200 hover:border-purple-400 rounded-2xl p-8 cursor-pointer transition-all bg-purple-50/30 hover:bg-purple-50/60 group text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <DocUnlockIcon className="w-8 h-8 text-black" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-violet-200 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <DocUnlockIcon className="w-8 h-8 text-purple-700" />
                 </div>
                 <h3 className="text-black font-bold mb-1 uppercase tracking-wider text-xs">Upload Document</h3>
                 <p className="text-black/60 text-sm font-medium">drag and drop your .docx file</p>
@@ -158,9 +158,9 @@ const App: React.FC = () => {
                 </div>
                 <div className="text-black text-sm font-black">{progress}%</div>
               </div>
-              <div className="h-2 w-full bg-black/10 rounded-full overflow-hidden">
+              <div className="h-2 w-full bg-purple-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-neutral-600 to-black transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-purple-400 to-violet-600 transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
@@ -170,14 +170,14 @@ const App: React.FC = () => {
           {status === 'success' && (
             <div className="text-center py-4 flex flex-col flex-1">
               <div className="flex-1 flex flex-col justify-center items-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mb-6 border border-black/10">
-                  <DocUnlockIcon className="w-10 h-10 text-black" />
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-violet-200 rounded-full flex items-center justify-center mb-6 border border-purple-200/60">
+                  <DocUnlockIcon className="w-10 h-10 text-purple-700" />
                 </div>
                 <h2 className="text-2xl font-bold text-black mb-2">Unlocked</h2>
                 <p className="text-black/60 text-sm mb-8 font-medium">
                   Restrictions removed. You can now redline freely.
                 </p>
-                <div className="w-full bg-black/[0.02] border border-black/5 rounded-xl p-4 flex items-center space-x-4 text-left">
+                <div className="w-full bg-purple-50/50 border border-purple-100 rounded-xl p-4 flex items-center space-x-4 text-left">
                   <i className="fas fa-file-word text-black/40 text-2xl shrink-0"></i>
                   <div className="flex-1 min-w-0">
                     <div className="text-black text-sm font-bold truncate">{file?.name}</div>
@@ -187,10 +187,10 @@ const App: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-3 mt-8">
-                <button onClick={reset} className="bg-black/5 hover:bg-black/10 text-black font-bold py-3 rounded-xl border border-black/10 transition-all uppercase text-[10px] tracking-widest cursor-pointer">
+                <button onClick={reset} className="bg-purple-50 hover:bg-purple-100 text-purple-900 font-bold py-3 rounded-xl border border-purple-200 transition-all uppercase text-[10px] tracking-widest cursor-pointer">
                   New File
                 </button>
-                <button onClick={downloadFile} className="bg-gradient-to-r from-neutral-800 to-black hover:from-black hover:to-neutral-900 text-white font-bold py-3 rounded-xl shadow-md transition-all flex items-center justify-center uppercase text-[10px] tracking-widest cursor-pointer">
+                <button onClick={downloadFile} className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold py-3 rounded-xl shadow-md transition-all flex items-center justify-center uppercase text-[10px] tracking-widest cursor-pointer">
                   <i className="fas fa-download mr-2 text-white"></i> <span className="text-white">Download</span>
                 </button>
               </div>
@@ -199,12 +199,12 @@ const App: React.FC = () => {
 
           {status === 'error' && (
             <div className="text-center py-10 flex flex-col flex-1 justify-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mx-auto mb-6 border border-black/10">
-                <i className="fas fa-triangle-exclamation text-black text-2xl"></i>
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 border border-amber-200/60">
+                <i className="fas fa-triangle-exclamation text-amber-700 text-2xl"></i>
               </div>
               <h2 className="text-xl font-bold text-black mb-2">Error</h2>
               <p className="text-black/60 text-sm mb-8 px-6 font-medium">{errorMessage}</p>
-              <button onClick={reset} className="bg-gradient-to-r from-neutral-800 to-black hover:from-black hover:to-neutral-900 text-white font-bold py-3 px-8 rounded-xl mx-auto transition-all uppercase text-[10px] tracking-widest cursor-pointer">
+              <button onClick={reset} className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold py-3 px-8 rounded-xl mx-auto transition-all uppercase text-[10px] tracking-widest cursor-pointer">
                 <span className="text-white">Try Again</span>
               </button>
             </div>
