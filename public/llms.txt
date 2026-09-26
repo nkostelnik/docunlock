@@ -1,0 +1,12 @@
+# docunlock
+
+> Removes Track Changes and editing restrictions from password-protected .docx files so you can redline freely. Runs entirely in the browser using JSZip; nothing is uploaded.
+
+## How it works
+A .docx file is a ZIP archive. Document protection (forced Track Changes, read-only, comments-only, forms-only) is recorded as a `<w:documentProtection>` element inside `word/settings.xml`. docunlock opens the archive in the browser, removes that element, repackages the file, and offers the result as `unlocked_<original name>.docx`.
+
+## What it does not do
+It only removes the protection flag. It does not decrypt a document that was encrypted with an open password (the kind Word demands before showing any content). It does not recover or reveal the protection password.
+
+## Primary page
+- [docunlock](https://nkostelnik.github.io/docunlock/): the tool itself.

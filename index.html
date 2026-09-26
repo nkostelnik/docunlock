@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>docunlock | Word Protection Remover</title>
+    <title>docunlock: Remove Word Track Changes &amp; Editing Restrictions</title>
+    <meta name="description" content="Removes Track Changes and editing restrictions from password-protected .docx files so you can redline freely. Runs entirely in the browser, nothing is uploaded.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nkostelnik.github.io/docunlock/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="docunlock: Remove Word Track Changes &amp; Editing Restrictions">
+    <meta property="og:description" content="Removes Track Changes and editing restrictions from password-protected .docx files so you can redline freely. Runs entirely in the browser, nothing is uploaded.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nkostelnik.github.io/docunlock/">
+    <meta property="og:site_name" content="docunlock">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="docunlock: Remove Word Track Changes &amp; Editing Restrictions">
+    <meta name="twitter:description" content="Removes Track Changes and editing restrictions from password-protected .docx files so you can redline freely. Nothing is uploaded.">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "docunlock",
+      "description": "Removes Track Changes and editing restrictions from password-protected .docx files so you can redline freely. Runs entirely in the browser using JSZip; nothing is uploaded.",
+      "url": "https://nkostelnik.github.io/docunlock/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any (runs in a web browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -29,6 +63,10 @@
 </head>
 <body>
     <div id="root"></div>
+    <noscript>
+        <h1>docunlock</h1>
+        <p>Removes editing restrictions from a .docx file so you can redline it freely. Counterparties often send Word documents with Track Changes forced on and the protection locked behind a password; docunlock strips that restriction and hands the document back, ready for markup. It works by opening the file as a ZIP archive in your browser, removing the &lt;w:documentProtection&gt; element from word/settings.xml, and repackaging it. Nothing is uploaded; the file never leaves your machine. This page requires JavaScript to run.</p>
+    </noscript>
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
