@@ -105,10 +105,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-4 bg-white text-black overflow-y-auto">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start py-10 px-4 bg-gradient-to-b from-white via-white to-neutral-100 text-black overflow-y-auto">
       <div className="w-full max-w-lg relative z-10 flex flex-col flex-1">
         <div className="text-center mb-10 shrink-0">
-          <div className="inline-flex items-center justify-center w-14 h-14 bg-black/5 border border-black/10 rounded-2xl mb-4 shadow-sm">
+          <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-black/5 to-black/15 border border-black/10 rounded-2xl mb-4 shadow-sm">
              <DocUnlockIcon className="w-7 h-7 text-black" />
           </div>
           <h1 className="text-3xl font-bold text-black tracking-tight mb-4 lowercase">docunlock</h1>
@@ -140,7 +140,7 @@ const App: React.FC = () => {
                 htmlFor="fileInput"
                 className="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-black/10 hover:border-black/30 rounded-2xl p-8 cursor-pointer transition-all bg-black/[0.01] hover:bg-black/[0.03] group text-center"
               >
-                <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <DocUnlockIcon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-black font-bold mb-1 uppercase tracking-wider text-xs">Upload Document</h3>
@@ -160,7 +160,7 @@ const App: React.FC = () => {
               </div>
               <div className="h-2 w-full bg-black/10 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-black transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-neutral-600 to-black transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
@@ -170,7 +170,7 @@ const App: React.FC = () => {
           {status === 'success' && (
             <div className="text-center py-4 flex flex-col flex-1">
               <div className="flex-1 flex flex-col justify-center items-center">
-                <div className="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mb-6 border border-black/10">
+                <div className="w-20 h-20 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mb-6 border border-black/10">
                   <DocUnlockIcon className="w-10 h-10 text-black" />
                 </div>
                 <h2 className="text-2xl font-bold text-black mb-2">Unlocked</h2>
@@ -190,7 +190,7 @@ const App: React.FC = () => {
                 <button onClick={reset} className="bg-black/5 hover:bg-black/10 text-black font-bold py-3 rounded-xl border border-black/10 transition-all uppercase text-[10px] tracking-widest cursor-pointer">
                   New File
                 </button>
-                <button onClick={downloadFile} className="bg-black hover:bg-black/90 text-white font-bold py-3 rounded-xl shadow-md transition-all flex items-center justify-center uppercase text-[10px] tracking-widest cursor-pointer">
+                <button onClick={downloadFile} className="bg-gradient-to-r from-neutral-800 to-black hover:from-black hover:to-neutral-900 text-white font-bold py-3 rounded-xl shadow-md transition-all flex items-center justify-center uppercase text-[10px] tracking-widest cursor-pointer">
                   <i className="fas fa-download mr-2 text-white"></i> <span className="text-white">Download</span>
                 </button>
               </div>
@@ -199,12 +199,12 @@ const App: React.FC = () => {
 
           {status === 'error' && (
             <div className="text-center py-10 flex flex-col flex-1 justify-center">
-              <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-black/10">
+              <div className="w-16 h-16 bg-gradient-to-br from-black/5 to-black/15 rounded-full flex items-center justify-center mx-auto mb-6 border border-black/10">
                 <i className="fas fa-triangle-exclamation text-black text-2xl"></i>
               </div>
               <h2 className="text-xl font-bold text-black mb-2">Error</h2>
               <p className="text-black/60 text-sm mb-8 px-6 font-medium">{errorMessage}</p>
-              <button onClick={reset} className="bg-black text-white font-bold py-3 px-8 rounded-xl mx-auto transition-all uppercase text-[10px] tracking-widest cursor-pointer">
+              <button onClick={reset} className="bg-gradient-to-r from-neutral-800 to-black hover:from-black hover:to-neutral-900 text-white font-bold py-3 px-8 rounded-xl mx-auto transition-all uppercase text-[10px] tracking-widest cursor-pointer">
                 <span className="text-white">Try Again</span>
               </button>
             </div>
